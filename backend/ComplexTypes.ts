@@ -17,10 +17,10 @@ let navLink: DataDefinition = {
     url: {type: 'string', authorInput: AuthorInput.Url}
 }
 let navLinks: DataDefinition[] = [
-    
+
 ]
 let footer: DataDefinition = {
-    navLinks: []
+    navLinks: navLinks
 }
 let IndexPage2: DataDefinition = {
     header: header3,
