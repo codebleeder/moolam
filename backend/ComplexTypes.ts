@@ -28,6 +28,11 @@ let IndexPage2: DataDefinition = {
         fullWidthTitle: fullWidthTitle
     },
     footer: {
-
+        navLinks: navLinks
     }
+}
+
+// iterate through IndexPage2
+for(let prop in IndexPage2) {
+    console.log(prop);
 }
