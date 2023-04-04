@@ -1,22 +1,21 @@
-import { AuthorInput } from "./AuthorInput";
 import { DataDefinition } from "./DataDefinition";
-import { FullWidthTitle } from "./FullWidthTitle";
-import { Header2 } from "./Header2";
-import { header3 } from "./Header3";
 import { inputCallbackText } from "./InputCallbackTextbox";
 
+let header: DataDefinition = {
+    title: {
+        authorInput: inputCallbackText
+    }
+}
 let fullWidthTitle: DataDefinition = {
     title: {authorInput: inputCallbackText},
     subTitle: {authorInput: inputCallbackText}
 }
-let navLinks: DataDefinition[] = [
-
-]
+let navLinks: DataDefinition[] = [];
 let footer: DataDefinition = {
     navLinks: navLinks
 }
 let IndexPage2: DataDefinition = {
-    header: header3,
+    header: header,
     body: {
         fullWidthTitle: fullWidthTitle
     },
@@ -24,7 +23,6 @@ let IndexPage2: DataDefinition = {
         navLinks: navLinks
     }
 }
-
 const printDataDefinition = (component: any) => {
     for(let prop in component) {
         console.log(prop, ': ');
@@ -38,4 +36,5 @@ const printDataDefinition = (component: any) => {
         }
     }
 }
+// example: 
 printDataDefinition(IndexPage2);
