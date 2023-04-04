@@ -3,18 +3,11 @@ import { DataDefinition } from "./DataDefinition";
 import { FullWidthTitle } from "./FullWidthTitle";
 import { Header2 } from "./Header2";
 import { header3 } from "./Header3";
+import { inputCallbackText } from "./InputCallbackTextbox";
 
-type IndexPage = {
-    header: Header2;
-    fullWidthTitle: FullWidthTitle;
-}
 let fullWidthTitle: DataDefinition = {
-    title: {type: 'string', authorInput: AuthorInput.TextBox},
-    subTitle: {type: 'string', authorInput: AuthorInput.TextBox}
-}
-let navLink: DataDefinition = {
-    label: {type: 'string', authorInput: AuthorInput.TextBox},
-    url: {type: 'string', authorInput: AuthorInput.Url}
+    title: {authorInput: inputCallbackText},
+    subTitle: {authorInput: inputCallbackText}
 }
 let navLinks: DataDefinition[] = [
 
@@ -32,7 +25,17 @@ let IndexPage2: DataDefinition = {
     }
 }
 
-// iterate through IndexPage2
-for(let prop in IndexPage2) {
-    console.log(prop);
+const printDataDefinition = (component: any) => {
+    for(let prop in component) {
+        console.log(prop, ': ');
+        if(typeof component[prop] === 'object')
+        {
+            printDataDefinition(component[prop])
+        }
+        else if(typeof component[prop] === 'function') 
+        {            
+            component[prop]();
+        }
+    }
 }
+printDataDefinition(IndexPage2);

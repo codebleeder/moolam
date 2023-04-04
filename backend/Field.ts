@@ -1,6 +1,6 @@
 import { AuthorInput } from "./AuthorInput";
+import { InputCallback } from "./InputCallback";
 
 export type Field = {
-    type: string;
-    authorInput: AuthorInput;
+    authorInput: InputCallback;
 }

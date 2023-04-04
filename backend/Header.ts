@@ -1,17 +1,15 @@
 import { AuthorInput } from "./AuthorInput"
 import { DataDefinition } from "./DataDefinition"
+import { inputCallbackText } from "./InputCallbackTextbox"
 
 const Header: DataDefinition = {
     title: {
-        type: 'string',
-        authorInput: AuthorInput.TextBox
+        authorInput: inputCallbackText
     },
     subTitle: {
-        type: 'string',
-        authorInput: AuthorInput.TextBox
+        authorInput: inputCallbackText
     },
     backgroundImage: {
-        type: 'string',
-        authorInput: AuthorInput.Image
+        authorInput: inputCallbackText
     }
 }
