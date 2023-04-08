@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "npx tsc; browserify ./build/Studio.js -o bundle.js"
+    "publish": "npx tsc && browserify ./build/data-components/Studio.js -o ./build/bundle.js -d"
   },
   "repository": {
     "type": "git",

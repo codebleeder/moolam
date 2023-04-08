@@ -1,4 +1,4 @@
-import { Field } from "./Field";
+import { Field } from "../definitions/Field";
 
 export type Header2 = {
     title: Field;

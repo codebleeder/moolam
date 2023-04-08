@@ -1,4 +1,4 @@
-import { DataDefinition } from "./DataDefinition";
+import { DataDefinition } from "../definitions/DataDefinition";
 import { inputCallbackText } from "./InputCallbackTextbox";
 
 let header: DataDefinition = {

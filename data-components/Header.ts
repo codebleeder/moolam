@@ -1,5 +1,5 @@
-import { AuthorInput } from "./AuthorInput"
-import { DataDefinition } from "./DataDefinition"
+import { AuthorInput } from "../definitions/AuthorInput"
+import { DataDefinition } from "../definitions/DataDefinition"
 import { inputCallbackText } from "./InputCallbackTextbox"
 
 const Header: DataDefinition = {

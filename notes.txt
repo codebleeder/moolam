@@ -1,0 +1,4 @@
+disadvantages/pain-points of crownpeak:
+* lack of version control system
+* tight integration between content and static html
+* slow when publishing in bulk 
