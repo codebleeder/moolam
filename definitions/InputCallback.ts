@@ -1,1 +1,1 @@
-export type InputCallback = () => void;
+export type InputCallback = (prop: string, level: number) => void;
