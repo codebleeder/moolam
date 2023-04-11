@@ -1,9 +1,10 @@
 export const printDataDefinition = (component: any, level: number = 0) => {
     for(let prop in component) {
         console.log('typeof', ': ', typeof component);
-        appendLabelToForm(prop, level);
+        
         if(typeof component[prop] === 'object')
         {
+            appendLabelToForm(prop, level);
             if(Array.isArray(component[prop]))
             {
                 for(let i=0; i<component[prop].length; ++i)

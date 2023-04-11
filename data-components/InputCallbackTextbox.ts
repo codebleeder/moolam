@@ -6,15 +6,18 @@ export const inputCallbackText: InputCallback = (prop: string, level: number = 0
     const fragment = document.createDocumentFragment();
     const divEl = document.createElement("div");
     divEl.classList.add('ms-' + level);
+    divEl.classList.add('mb-3');
     const inputHtml = fragment.appendChild(divEl);
        
     const labelEl = document.createElement('label');
-    labelEl.htmlFor = 'input-element';
+    labelEl.htmlFor = prop;
     labelEl.textContent = prop;
-    //inputHtml.appendChild(labelEl);
+    labelEl.classList.add('form-label');
+    inputHtml.appendChild(labelEl);
 
     const inputEl = document.createElement('input');
-    inputEl.id = prop + 'input-element';
+    inputEl.id = prop;
+    inputEl.classList.add('form-control');
     inputHtml.appendChild(inputEl);
     form?.appendChild(inputHtml);    
 }
