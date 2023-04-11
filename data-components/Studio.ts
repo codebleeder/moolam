@@ -18,8 +18,14 @@ const printSaveButton = () => {
     buttonEl.textContent = 'Save';
     buttonEl.classList.add('btn');
     buttonEl.classList.add('btn-primary');
+    buttonEl.addEventListener('click', saveBtnEvent);
+    buttonEl.type = 'button';
 
     divEl.appendChild(buttonEl);
     const inputHtml = fragment.appendChild(buttonEl);
     form?.appendChild(inputHtml);
+}
+
+const saveBtnEvent = (ev: MouseEvent): any => {
+    console.log('saveBtnEvent clicked');
 }

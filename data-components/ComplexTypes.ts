@@ -2,13 +2,11 @@ import { DataDefinition } from "../definitions/DataDefinition";
 import { inputCallbackText } from "./InputCallbackTextbox";
 
 let header: DataDefinition = {
-    title: {
-        authorInput: inputCallbackText
-    }
+    title: inputCallbackText
 }
 let fullWidthTitle: DataDefinition = {
-    title: {authorInput: inputCallbackText},
-    subTitle: {authorInput: inputCallbackText}
+    title: inputCallbackText,
+    subTitle: inputCallbackText
 }
 let navLinks: DataDefinition[] = [
     {link1: inputCallbackText},
@@ -24,8 +22,7 @@ let fullWidthTitle2: DataDefinition = {
 export const IndexPage2: DataDefinition = {
     header: header,
     body: {
-        fullWidthTitle: fullWidthTitle,
-        fullWidthTitle2: fullWidthTitle2
+        fullWidthTitle: fullWidthTitle        
     },
     footer: {
         navLinks: navLinks
