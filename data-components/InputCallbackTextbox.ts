@@ -1,6 +1,6 @@
 import { InputCallback } from "../definitions/InputCallback";
 
-export const inputCallbackText: InputCallback = (prop: string, level: number = 0) => {
+export const inputCallbackText: InputCallback = (prop: string, level: number = 0, id: string = '') => {
     console.log('inputCallbackText')
     const form = document.getElementById('author-input-form');
     const fragment = document.createDocumentFragment();
@@ -10,13 +10,15 @@ export const inputCallbackText: InputCallback = (prop: string, level: number = 0
     const inputHtml = fragment.appendChild(divEl);
        
     const labelEl = document.createElement('label');
-    labelEl.htmlFor = prop;
+    //labelEl.htmlFor = prop;
+    labelEl.htmlFor = id;
     labelEl.textContent = prop;
     labelEl.classList.add('form-label');
     inputHtml.appendChild(labelEl);
 
     const inputEl = document.createElement('input');
-    inputEl.id = prop;
+    //inputEl.id = prop;
+    inputEl.id = id;
     inputEl.classList.add('form-control');
     inputHtml.appendChild(inputEl);
     form?.appendChild(inputHtml);    

@@ -1,5 +1,6 @@
 import { IndexPage2 } from "./ComplexTypes";
 import { printDataDefinition } from "./printDataDefinition";
+import { printJson } from "./printJson";
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Welcome to Studio");
@@ -27,5 +28,8 @@ const printSaveButton = () => {
 }
 
 const saveBtnEvent = (ev: MouseEvent): any => {
+    const jsonCopy = IndexPage2;
+    printJson(jsonCopy);
     console.log('saveBtnEvent clicked');
+    console.log(jsonCopy);
 }
