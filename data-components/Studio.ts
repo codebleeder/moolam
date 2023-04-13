@@ -32,4 +32,14 @@ const saveBtnEvent = (ev: MouseEvent): any => {
     printJson(jsonCopy);
     console.log('saveBtnEvent clicked');
     console.log(jsonCopy);
+    publishDataComponent(jsonCopy);
+}
+const publishDataComponent = (dataComponent: any) => {
+    fetch('http://localhost:3001/data-component', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dataComponent)
+    })
 }
